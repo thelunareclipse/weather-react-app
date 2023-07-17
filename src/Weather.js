@@ -4,7 +4,10 @@ import "./Weather.css";
 export default function Weather() {
   return (
     <div>
-      <h1>Hello!</h1>
+      <form>
+        <input type="text" />
+        <input type="submit" value="Search" />
+      </form>
       <p>
         <a
           href="https://github.com/thelunareclipse/weather-react-app"
