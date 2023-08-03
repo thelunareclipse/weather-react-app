@@ -1,3 +1,12 @@
 a {
   color: white;
 }
+
+.weather {
+  border: solid 1px #a2c11c;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  height: 508px;
+}
