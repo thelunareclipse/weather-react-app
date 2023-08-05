@@ -3,10 +3,25 @@ a {
 }
 
 .weather {
+  background-color: #283739;
   border: solid 1px #a2c11c;
   padding: 10px 20px;
   margin-top: 30px;
   border-radius: 15px;
-  max-width: 600px;
+  width: 600px;
   height: 508px;
+}
+
+.weather li {
+  list-style: none;
+}
+
+.search-city {
+  background-color: #a2c11c;
+  color: #283739;
+  padding: 6px 12px;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+
 }
