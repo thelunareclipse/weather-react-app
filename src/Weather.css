@@ -12,8 +12,8 @@ a {
   height: 508px;
 }
 
-.weather li {
-  list-style: none;
+.WeatherInfo ul {
+  list-style-type: none;
 }
 
 .search-city {
