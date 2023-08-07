@@ -9,7 +9,7 @@ a {
   margin-top: 30px;
   border-radius: 15px;
   width: 600px;
-  height: 508px;
+  height: 450px;
 }
 
 .WeatherInfo ul {
@@ -24,4 +24,16 @@ a {
   border-radius: 6px;
   border: none;
 
+}
+
+.WeatherInfo-icon {
+  max-width: 250px;
+}
+
+.temperature {
+  font-size: 45px;
+}
+
+.unit {
+  font-size: 20px;
 }
