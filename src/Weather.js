@@ -10,6 +10,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -19,7 +20,7 @@ export default function Weather(props) {
       city: response.data.name,
     });
   }
-  
+
   function search() {
     const apiKey = "197ef3a642b76eef90e131866f74a0a0";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -61,12 +62,12 @@ export default function Weather(props) {
           <div>
             <WeatherInfo data={weatherData} />
           </div>
-          <WeatherForecast />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
   } else {
     search();
-     return "Loading...";
+    return "Loading...";
   }
 }
