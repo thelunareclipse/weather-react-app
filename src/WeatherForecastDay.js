@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function WeatherForecaseDay(props) {
-  console.log(props);
   function maxTemperature() {
     let temperature = Math.round(props.data.temp.max);
     return `${temperature}°`;
@@ -23,8 +22,12 @@ export default function WeatherForecaseDay(props) {
 
   function weatherIcon() {
     let iconUrl = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
-
     return iconUrl;
+  }
+
+  function weatherDescription() {
+    let iconDescription = props.data.weather[0].description;
+    return iconDescription;
   }
 
   return (
@@ -32,8 +35,8 @@ export default function WeatherForecaseDay(props) {
       <div className="WeatherForecast-day">{day()}</div>
       <div>
         <img
-          code={weatherIcon()}
-          alt="rainy day"
+          src={weatherIcon()}
+          alt={weatherDescription()}
           className="WeatherForecast-icon"
         />
       </div>
